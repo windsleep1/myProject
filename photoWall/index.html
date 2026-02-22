@@ -81,7 +81,7 @@
         </div>
         <div class="box">
             <div id="midImgBox">
-                <!-- 中间7张图片 -->
+                <!-- 中间6张图片 -->
             </div>
         </div>
         <div class="box">
@@ -104,7 +104,7 @@
         bottom: { direction: 'right' }
     };
 
-    // 图片固定宽度（应与 CSS 中设置的宽度一致）
+    // 图片固定宽度
     const IMG_WIDTH = 200;
 
     // 工具函数：为容器添加图片
@@ -112,7 +112,7 @@
         const container = document.getElementById(containerId);
         for (let i = 1; i <= count; i++) {
             const img = document.createElement('img');
-            img.src = `./picture/${folder}/${i}.jpg`;  // 请确保路径正确
+            img.src = `./picture/${folder}/${i}.jpg`;
             img.alt = '';
             img.className = className;
             container.appendChild(img);
@@ -187,7 +187,7 @@
 
 
 
-        // 应用动画（时长20秒，可根据需要调整）
+        // 应用动画
         container.style.animation = `${keyframesName} 30s linear infinite`;
     }
 
@@ -196,5 +196,6 @@
     applyAnimation('midImgBox', scrollConfig.mid.direction, totalWidth.mid);
     applyAnimation('bottomImgBox', scrollConfig.bottom.direction, totalWidth.bottom);
 </script>
+
 
 </html>
